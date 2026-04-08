@@ -82,7 +82,7 @@ To see if the genome annotation found the ACT 1 gene, use the `grep` command to 
 
 ### Question 3
 
-Does your genome have a predicted ACT1 gene? 
+Does your genome have a predicted ACT1 gene? How did you figure it out?
 
 ### Functional Annotation Step 2 - Genome annotation total
 
