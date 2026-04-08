@@ -108,9 +108,78 @@ How many genes in your genome have a known functional annotation?
 
 ### Question 5
 
-Select a protein that is functionally annotated in your genome. Report the gene name, the description, and google 1 fact about that gene in yeast. 
+Select a protein that is functionally annotated in your genome. Report the gene name, the description, and google 1 fact about that gene in yeast.  
 
 
+
+
+## Environmental DNA
+
+I have collected data from publicly available environmental DNA experiments. You will search these sequencing reads for your ITS sequence. 
+
+### Blast search environmental DNA
+
+The environmental sequencing reads (_not_ assemblies) are in the file `/projects/class/binf3201_001/SRA/all_env_reads.fasta`
+
+This is a large file so we won't copy it to your directory. 
+
+The first thing you will want to do is use change directory `cd` to navigate to the folder where your ITS sequence is.
+
+We will again use BLAST to search the environmental DNA for your ITS sequence.
+
+```
+module load blast
+blastn -query <NAME>_reference.fasta.ITS2_filtered.fasta -subject /projects/class/binf3201_001/SRA/all_env_reads.fasta -outfmt "6 qseqid sseqid pident length evalue` -out sra_results.txt
+```
+
+When this completes your data will be in a file called sra_results.txt
+
+These columns are    
+
+1.  qseqid      query or source (gene) sequence id
+2.  sseqid      subject or target (reference genome) sequence id
+3.  pident      percentage of identical positions
+4.  length      alignment length (sequence overlap)
+5.  evalue      expect value
+
+
+### Analyze the results
+
+Use `cat` to view your results file 
+
+Find a "good" result in this file. Good results will have a very small e-value (the higher the number after `e-` the smaller the number). They will also have a long length. 
+
+The second column contains the identifier for the eDNA dataset that contains the ITS of your species. The identifier is everything _before_ the `.`. So if the second column says SRR1234567.0496 the identifier is SRR1234567
+
+### Question 6
+
+What is the identifier for the eDNA file that contains your ITS sequence?
+
+### Find out where your species was found.
+
+Go to this website and enter your identifier in the search bar https://www.ncbi.nlm.nih.gov/sra 
+
+To learn about this experiment there are several places you can look. 
+- Under **Study** you can click **show Abstract**
+- On the right side under **Related Information** you can click **BioSample**
+- On the right side under **Related Information** you can click **BioProject** - _Note_ this data will apply to the entire project not just this one sequencing sample
+
+
+### Question 7
+
+Was your sample assoicated with a specific geographic location? If so, what location was that?
+
+### Question 8
+
+Was your sample associated with a specific host or organisms? If so, what organism?
+
+### Question 9
+
+Was your sample associated with a specific medium, substrate, or object? If so, what substrate?
+
+### Question 10
+
+Provide one other piece of information about the sample containing the ITS of your species. 
 
 
 
