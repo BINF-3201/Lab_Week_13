@@ -8,6 +8,8 @@ Your genome annotation and associated data are in the folder `annotation/predict
 
 The first file we will look at is the `species.stats.json` file. Navigate into the predict_results folder and view that file with `cat`. 
 
+**IF YOU DONT SEE THESE FILES** let Dr. LaBella know and she will provide you with the correct results. 
+
 ### Question 1
 
 Report the following statistics for your annotation 
