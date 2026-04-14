@@ -129,7 +129,7 @@ We will again use BLAST to search the environmental DNA for your ITS sequence.
 
 ```
 module load blast
-blastn -query <NAME>_reference.fasta.ITS2_filtered.fasta -subject /projects/class/binf3201_001/SRA/all_env_reads.fasta -outfmt "6 qseqid sseqid pident length evalue` -out sra_results.txt
+blastn -query <NAME>_reference.fasta.ITS2_filtered.fasta -subject /projects/class/binf3201_001/SRA/all_env_reads.fasta -outfmt "6 qseqid sseqid pident length evalue" -out sra_results.txt
 ```
 
 When this completes your data will be in a file called sra_results.txt
